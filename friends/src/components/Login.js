@@ -6,8 +6,8 @@ import axios from 'axios';
 class Login extends React.Component {
   state = {
     credentials: {
-      username: '',
-      password: ''
+      username: 'Lambda School', // CHANGE THIS BACK TO BLANK LATER!
+      password: 'i<3Lambd4' // CHANGE THIS BACK TO BLANK LATER!
     },
     isLoading: false,
   };
@@ -36,6 +36,7 @@ class Login extends React.Component {
         console.log(err.response);
       });
     this.setState({...this.state, isLoading: false});
+    this.props.history.push('/list');
   };
 
   render() {
